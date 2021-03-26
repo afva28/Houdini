@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houdini</title>
+
+</head>
+
+<body>
+    
+    <h1>Olá Amiguinho</h1>
+    <h2>Vamos jogar um jogo muito bacaaaaaaano...</h2>
+    <h3>Pensa num número entre <span id="minNum"></span> e <span id="maxNum"></span></h3>
+    <h3>O número em que pensas te foi: <span id="numero"></span></h3>
+
+    <hr>
+
+    <h3>O número é:</h3>
+    <button onclick="maior()">É maior!</button>
+    <button onclick="menor()">É menor!</button>
+    <button onclick="acertou()">É esse!</button>
+
+    <hr>
+
+    <h3><span id="genio"></span></h3>
+
+    <script>
+
+        var minNum = 10;
+        var maxNum = 40;
+        var tentativa = randomRage (10,40);
+        
+
+        document.getElementById("minNum").innerHTML = minNum;
+        document.getElementById("maxNum").innerHTML = maxNum;
+        document.getElementById("numero").innerHTML = tentativa;
+
+        var maior = function()
+        {
+            minNum = tentativa
+            tentativa = Math.round ((minNum+maxNum)/2);
+
+        }
+        
+        var menor = function()
+        {
+            maxNum = tentativa
+            tentativa = Math.round ((minNum+maxNum)/2);
+
+        }
+
+        var acertou = function()
+        {
+
+            document.getElementById("genio").innerHTML = "Sou um génio meu menino!";
+
+        }
+
+    </script>
+
+</body>
+</html>

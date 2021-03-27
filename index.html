@@ -32,25 +32,26 @@
 
         var minNum = 10;
         var maxNum = 40;
-        var tentativa = randomRage (10,40);
+        var tentativa = Math.round ((minNum+maxNum)/2);
         
 
         document.getElementById("minNum").innerHTML = minNum;
         document.getElementById("maxNum").innerHTML = maxNum;
         document.getElementById("numero").innerHTML = tentativa;
+      
 
         var maior = function()
         {
-            minNum = tentativa
+            minNum = tentativa;
             tentativa = Math.round ((minNum+maxNum)/2);
-
+            document.getElementById("numero").innerHTML = tentativa;
         }
         
         var menor = function()
         {
-            maxNum = tentativa
+            maxNum = tentativa;
             tentativa = Math.round ((minNum+maxNum)/2);
-
+            document.getElementById("numero").innerHTML = tentativa;
         }
 
         var acertou = function()

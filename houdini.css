@@ -7,12 +7,15 @@ body{
     text-align: center;
 }
 
+header img{
+    width:300px;
+    height:300px;
+    
+    object-fit: cover;
+}
 
 h2{
-    color: #018073;
+    color: #000000;
     margin-bottom: -10px;
     margin-top: 10px;
 }
-
-
-
